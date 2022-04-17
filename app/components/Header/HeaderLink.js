@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 export default styled(Link)`
   display: inline-flex;
-  padding: 0.25em 2em;
-  margin: 1em;
+  padding: 4px 8px;
   text-decoration: none;
   border-radius: 4px;
   -webkit-font-smoothing: antialiased;
@@ -12,14 +11,18 @@ export default styled(Link)`
   user-select: none;
   cursor: pointer;
   outline: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: 600;
   font-size: 16px;
-  border: 2px solid #41addd;
-  color: #41addd;
+  line-height: 20px;
+  color: #000000;
+
+  &:first-child {
+    margin-right: 12px;
+  }
 
   &:active {
-    background: #41addd;
-    color: #fff;
+    // background: #41addd;
+    // color: #fff;
   }
 `;
