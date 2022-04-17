@@ -11,7 +11,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
@@ -40,6 +40,7 @@ const ContentWrapper = styled.div`
 export default function App() {
   return (
     <AppWrapper>
+      <HashRouter basename={process.env.PUBLIC_URL}>
       <Helmet
         titleTemplate="%s - Paige's Web Portfolio"
         defaultTitle="Paige's web portfolio"
@@ -56,6 +57,7 @@ export default function App() {
       </ContentWrapper>
       <Footer />
       <GlobalStyle />
+      </HashRouter>
     </AppWrapper>
   );
 }
